@@ -38,6 +38,7 @@
             showMeetingHeader : false,
             disableInvite : false,
         });
+        console.log('/api/v1/guests/zoom/join/config?api_token=123123')
         $.get("/api/v1/guests/zoom/join/config?api_token=123123").done(function(data){
             console.log(data);
             ZoomMtg.join(data);
