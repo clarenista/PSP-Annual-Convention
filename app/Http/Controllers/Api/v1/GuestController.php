@@ -37,7 +37,7 @@ class GuestController extends Controller
         $user = request()->user();
         $signature = $this->zoomSignature($apiKey, $secret, $meetingNumber);
         $userName = $user->first_name . " " . $user->last_name;
-        $userEmail = $user->email;
+        $userEmail = $user->email . '@gmail.com';
 
         return compact('signature', 'meetingNumber', 'userName', 'apiKey', 'userEmail', 'passWord');
     }
