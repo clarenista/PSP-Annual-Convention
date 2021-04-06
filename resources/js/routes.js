@@ -13,6 +13,7 @@ import Gallery from './components/Gallery.vue';
 import NotFound from './components/NotFound.vue';
 import SponsorPage from './components/SponsorPage.vue';
 import Meeting from './components/Meeting.vue';
+import MeetingZoom from './components/Meeting/Zoom.vue';
 
 Vue.use(VueRouter);
 
@@ -23,7 +24,7 @@ export const routes = [
         path: '/',
         component: Pannellum,
         props: true,
-        meta: { 
+        meta: {
             requiresAuth: true,
          }
     },
@@ -32,9 +33,9 @@ export const routes = [
         path: '/sponsors/:id',
         component: SponsorPage,
         props: true,
-        meta: { 
+        meta: {
             requiresAuth: true,
-         }        
+         }
 
 
     },
@@ -42,9 +43,9 @@ export const routes = [
         name: 'vote',
         path: '/vote',
         component: Vote,
-        meta: { 
+        meta: {
             requiresAuth: true,
-         }        
+         }
 
 
     },
@@ -60,7 +61,7 @@ export const routes = [
     //     name: 'home',
     //     path: '/',
     //     component: Home,
-    //     meta: { 
+    //     meta: {
     //         requiresAuth: true,
     //      }
     // },
@@ -68,7 +69,7 @@ export const routes = [
         name: 'registration',
         path: '/registration',
         component: Registration,
-        meta: { 
+        meta: {
             requiresAuth: true,
             requireCanCreateUser: true
          }
@@ -77,7 +78,7 @@ export const routes = [
         name: 'users',
         path: '/users',
         component: Users,
-        meta: { 
+        meta: {
             requiresAuth: true,
          }
     },
@@ -85,24 +86,24 @@ export const routes = [
         name: 'login',
         path: '/login',
         component: Login,
-        meta: { 
+        meta: {
             requiresAuth: false,
          }
-    },  
+    },
     {
         name: 'boothman',
         path: '/boothman',
         component: BoothMan,
-        meta: { 
+        meta: {
             requiresAuth: true,
             requireCanManageBooth: true
          }
-    },   
+    },
     {
         name: 'gallery',
         path: '/gallery',
         component: Gallery,
-        meta: { 
+        meta: {
             requiresAuth: true,
             is_admin : true
          }
@@ -112,8 +113,11 @@ export const routes = [
         path: '/404',
         component: NotFound,
     },
-
-    
+    {
+        name: 'zoom-test',
+        path: '/zoom-test',
+        component: MeetingZoom,
+    },
 ];
 
 const router = new VueRouter({
@@ -146,7 +150,7 @@ router.beforeEach((to, from, next) => {
                     })
                 }
             }
-            
+
             else{
                 next()
             }

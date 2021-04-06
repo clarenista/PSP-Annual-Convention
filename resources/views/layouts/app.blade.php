@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="/css/app.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="https://source.zoom.us/1.9.1/css/bootstrap.css" />
+    <link type="text/css" rel="stylesheet" href="https://source.zoom.us/1.9.1/css/react-select.css" />
     <title>Convention</title>
     <style>
       html, body {
@@ -15,7 +17,7 @@
         overflow: hidden;
         background-image: linear-gradient(to right, #9cf0c8, #4c748c);
         background-size: cover;
-        background: url("images/login_bg.jpg") no-repeat;        
+        background: url("images/login_bg.jpg") no-repeat;
         background-position: center;
         background-attachment: fixed;
       }
