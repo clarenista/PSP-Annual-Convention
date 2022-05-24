@@ -103,7 +103,7 @@ class RegisterWebinarGuest extends Command
             ->whereNotNull('email')
             ->whereDoesntHave('webinars')
             ->whereNotIn('email_address',['paduamdpatho@yahoo.com'])
-            ->whereIn('id', [37])
+            // ->whereIn('id', [37])
             ->get();
         echo join(', ', $guests->pluck('email_address')->toArray());
         echo PHP_EOL . $guests->count();
