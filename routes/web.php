@@ -19,6 +19,8 @@ use Illuminate\Support\Facades\Route;
 //     return view('layouts.app');
 // });
 
+Route::view('/welcome','welcome');
+
 Route::get('/api/v1/event', [EventController::class, 'get'])->middleware([]);
 
 Route::get('/meeting-hall', function(){
